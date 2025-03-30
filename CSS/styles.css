@@ -2,6 +2,10 @@
     --body-bg-color: #ccccdf; 
     --text-color: #000000; 
     --colorh1-color: #393996; 
+    --fondo-proyectos: #000000; /*color de fondo de la tarjeta*/
+    --btn-bg-color: #29295e; /*color de fondo de los botones*/
+    --btn-hover-bg-color: #5fbeaa; /* Sombra más clara en los botones */
+    --highlight-color: #10069a; /*color de resaltado*/
 }
 /*aplicar las variables CSS creadas por el root*/
 
