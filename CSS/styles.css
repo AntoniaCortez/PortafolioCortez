@@ -11,7 +11,27 @@ body {
     color: #1f205c;
     transition: background-color 0.3s, color 0.3s;
 }
-
+.dark-mode {
+    background-color: rgb(3, 0, 34);
+    color: white;
+}
+.dark-mode button {
+    background-color: rgb(7, 0, 39);
+    color: rgb(255, 255, 255);
+}
+.dark-mode header {
+    background-color: #1d1b8f;
+}
+.dark-mode .project-card {
+    background: #1d1b8f;
+    color: #000000;
+}
+.dark-mode a {
+    color: #ffffff;
+}
+.dark-mode h2 {
+    color: #acb9ff;
+}
 header {
     background-color: #195372;
     color: rgb(252, 252, 252);
@@ -92,5 +112,26 @@ p1 {
     position: relative;
     width: 100%;
 }
-
-
+.dark-mode-toggle {
+    margin: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: #4da8da;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dark-mode-toggle:hover {
+    background-color: #3691c4;
+    transform: scale(1.05);
+}
+.dark-mode .dark-mode-toggle {
+    background-color: #80cfff;
+    color: #333;
+}
+.dark-mode .dark-mode-toggle:hover {
+    background-color: #5ab9ea;
+}

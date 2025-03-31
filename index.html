@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 <body>
-
+    
     <!-- Header -->
     <header>
         
@@ -29,6 +29,8 @@
             
         </div>
     </header>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Oscuro</button>
+
 
     <!-- Sección Sobre Mí -->
     <section id="sobremi" class="sobremi">
@@ -81,5 +83,20 @@
     <footer>
         <center><p>© 2025 Antonia Cortez | Todos los derechos reservados</p></center>
     </footer>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.querySelector('.dark-mode-toggle');
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = 'Modo Claro';
+                button.style.backgroundColor = '#1d1b8f';
+                button.style.color = 'white';
+            } else {
+                button.textContent = 'Modo Oscuro';
+                button.style.backgroundColor = '#195372';
+            }
+        }
+    </script>
 </body>
 </html>
