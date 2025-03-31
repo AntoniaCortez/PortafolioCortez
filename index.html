@@ -1,88 +1,85 @@
 <!DOCTYPE html>
- <html lang="es"> <!-- Definir el idioma -->
- <head>
-     <meta charset="UTF-8"> <!-- Definir el tipo de codificación -->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-     <!-- agregamos etiquetas meta para el Seo, y otra del author-->
-     <meta name="description" content="Portafolio web de Antonia Cortez">
-     <meta name="keywords" content="Portafolio, web, desarrollador web, programación,Contacto">
-     <meta name="author" content="Antonia">
-     <title>Portafolio </title>
-     
-      <!-- CSS -->
-      <link rel="stylesheet" href="./css/styles.css">
-      <link rel="stylesheet" href="./css/sobremi.css">
-      <link rel="stylesheet" href="./css/experiencias.css">
-      <link rel="stylesheet" href="./css/estudios.css">
-      <link rel="stylesheet" href="./css/proyecto.css">
-      <link rel="stylesheet" href="./css/contacto.css">
- </head>
- <body>
-     <header>
-         <h1>Antonia Cortez</h1>
-         <nav>
-             <ul class="navigation">
- 
-                 <li><a href="#">Sobre mi</a></li>
-                 <li><a href="#">Experiencias</a></li>
-                 <li><a href="#">Mis estudios</a></li>
-                 <li><a href="#">Proyectos</a></li>
-                 <li><a href="#">Contacto</a></li>
- 
-             </ul>
-         </nav>
-     </header>
-     <main>
-         <section class="sobremi">
-             <article class="container-sobremi">
-                 <img class="img-perfil" src="c:\Users\Antonia\Downloads\88484F24-70D1-4A09-AF66-6CA2A898DB53.jpeg" alt=" Antonia" width="240" height="200">
-                 <h3> 
-                     Soy <b>Estudiante de 7mo Informatica.</b>
-                     Me apasiona programar y desarrollar aplicaciones web, ademas de aspectos de la contabilidad
-                 </h3>
-             </article>
-         </section>
- 
-     <!-- Sección de experiencias -->
-     <section id="experiencias" class="experiencias">
-         <article class="container-experiencias">
-             <h2>Experiencias</h2>
-             <h3>Desarrollador web</h3>
-             <p>Desarrollo de aplicaciones web con tecnologías como HTML, CSS, JavaScript, MySQL, entre otras.</p>
-         </article>
-     </section>
-     <!-- Sección de estudios -->
-     <section id="estudios" class="estudios">
-         <article class="container-estudios">
-             <h2>Mis estudios</h2>
-             <h3>Tecnica en Programacíon</h3>
-             <p>Actualmente estoy cursando el ultimo año de secundaria en el Instituto el Obraje en la especialidad de informatica</p>
-         </article>
-     </section>
-     <!-- Sección de proyectos -->
-     <section id="proyectos" class="proyectos">
-        <article class="container-proyectos">
-            <h2>Proyectos</h2>
-            <h3>Pyme</h3>
-            <p>Realice una pyme de una lomiteria, desde cero con una pagina web que incluia html,css</p>
-            <h3>Collares de Gamuza</h3>
-            <p>Actualmente formo parte de un emprendimiento de collares de gamuza y realice para el un catalo web</p>
-        </article>
-    </section>
-    <!-- Sección de contacto -->
-    <section id="contactos" class="contactos">
-        <article class="container-contactos">
-            <h2>Contactos</h2>
-            <h3>instagram</h3>
-            <p>@antoo.cortezz</p>
-            <h3>gmail</h3>
-            <p>antocortez18d@gmail.com</p>
-            <h3>telefono</h3>
-            <p>3547-630075</p>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Antonia Cortez">
+    <title>Portafolio | Antonia Cortez</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
         
-        </article>
+        <div class="container">
+            <h1>Antonia Cortez</h1>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#sobremi">Sobre Mí</a></li>
+                    <li><a href="#estudios">Estudios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    
+                </ul>
+            </nav>
+
+          
+       
+            
+        </div>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobremi" class="sobremi">
+        <div class="content">
+            <img class="img-perfil" src="88484F24-70D1-4A09-AF66-6CA2A898DB53.jpeg" alt="Antonia" style="width: 200px; height: 200px;">
+            <div class="text">
+                <h2>Hola, soy Antonia Cortez</h2>
+                <p>Me apasiona programar y tengo intereses por las ciencias económicas.</p>
+            </div>
+        </div>
     </section>
-     </main>
- </body>
- </html>
+
+    <!-- Sección Estudios -->
+    <section id="estudios" class="estudios">
+        <h2>Mis Estudios</h2>
+        <p>Actualmente estoy cursando 7mo año de la especialidad Informática en el Instituto El Obraje.</p>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyectos-container">
+            <div class="project-card">
+                <img src="pnglogo.png" alt="Proyecto 1" style="width: 300px; height: 200px;">
+                <h3>Pyme Lomitería</h3>
+                <p1>Realicé como proyecto de fin de año una pyme de una lomitería desde 0, utilicé conocimientos sobre HTML, CSS y JavaScript.</p1>
+            </div>
+            <div class="project-card">
+                <img src="IMG_6576.jpg" alt="Proyecto 2"style="width: 300px; height: 250px;">
+                <h3>Collares de Gamuza</h3>
+                <p1>Actualmente tengo un emprendimiento de collares de gamuza y aplico conocimientos en Photoshop para redes sociales.</p1>
+            </div>
+            <div class="project-card">
+                <img src="omn.png" alt="Proyecto 3"style="width: 300px; height: 250px;">
+                <h3>OMINIM</h3>
+                <p1>Realicé un catálogo web de ventas, stock y precios para una empresa llamada OMINIM.</p1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <b>Instagram:</b> <a href="https://instagram.com/antoo.cortezz" target="_blank">@antoo.cortezz</a>
+        <center><b>Email:</b> <a href="mailto:antocortez18d@gmail.com">antocortez18d@gmail.com</a></br></center>
+        <center><b>Teléfono:</b> <a href="tel:+543547630075">3547-630075</a></center>
+    </section>
+    
+
+    <footer>
+        <center><p>© 2025 Antonia Cortez | Todos los derechos reservados</p></center>
+    </footer>
+</body>
+</html>

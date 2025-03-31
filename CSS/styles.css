@@ -1,166 +1,96 @@
-:root {
-    --body-bg-color: #ccccdf; 
-    --text-color: #000000; 
-    --colorh1-color: #393996; 
-    --fondo-proyectos: #000000; /*color de fondo de la tarjeta*/
-    --btn-bg-color: #29295e; /*color de fondo de los botones*/
-    --btn-hover-bg-color: #5fbeaa; /* Sombra más clara en los botones */
-    --highlight-color: #10069a; /*color de resaltado*/
+/* Estilos Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*aplicar las variables CSS creadas por el root*/
 
 body {
-    background: var(--body-bg-color); /*color de fondo*/
-    color: var(--text-color); /*color de la fuente*/
-    font-family: 'Segoe', 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #b7d9fc;
+    color: #1f205c;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h1,h2,h3{
-    color: var(--colorh1-color); /*color de la fuente*/
+header {
+    background-color: #195372;
+    color: rgb(252, 252, 252);
+    padding: 20px;
+    text-align: center;
 }
 
-main {
+header .container {
     display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Ajusta el espacio entre secciones */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/*Titulo del header*/
-.titulo {
-    font-size: 2rem;
-    text-align: center;
-    margin: 1rem;
+header nav ul {
+    list-style-type: none;
 }
-/*barra de navegacion*/
-.navigation {
-    display: flex; /*flexbox*/
-    gap: 3rem; /*espacio entre los elementos*/
-    list-style: none; /*quita los puntos de la lista*/
-    justify-content: flex-end; /*justifica los elementos a la derecha*/
-    margin: 0  3rem; /*margen superior e inferior*/
-    overflow: hidden; /*oculta los elementos que sobresalen*/
 
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
-/* enlaces de la barra de navegacion*/
-.navigation li {
-    font-size: 1rem;
-    width:  100px; /*ancho de los elementos*/
-    text-align: center;
-    padding: 0.5rem; /*espacio interno*/
-    border-radius: 0.5rem; /*bordes redondeados*/
-    background: #29295e; /*color de fondo*/
-    box-shadow: 0 0 0.5rem #a3a3a3; /*sombra*/
-}
-/* estilo de la barra de navegacion*/
-a {
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    color: #fff;
+    font-size: 1.2em;
 }
 
-.sobremi {
+.toggle-btn {
     display: flex;
-    justify-content: center; /*centra el contenido*/
+    align-items: center;
+    cursor: pointer;
 }
-.container-sobremi {
+
+.toggle-btn input[type="checkbox"] {
+    display: none;
+}
+
+/* Secciones */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: #00293f;
+}
+
+p1 {
+    color: #ffffff;
+}
+.proyectos-container {
     display: flex;
-    width: 50%; /*ancho del contenedor*/
-    padding: 2rem;
-    margin-top: 5rem; /*margen superior*/
-    line-height: 2.5rem; /*espacio entre los parrafos*/
-    font-size: large; /*tamaño de la fuente*/
-    color: azure; /*color de la fuente*/
-    gap: 5rem; /*espacio entre los elementos*/
-    gap: 2rem; /*espacio entre los elementos*/
-    align-items: center; /*alinea los elementos al centro*/
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.project-card {
+    width: 30%;
+    background: #195372;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.img-perfil {
-    border-radius: 50%; /*bordes redondeados*/
-}
-.experiencias, .estudios{
-    display: flex;
-    justify-content: center; /*centra el contenido*/
-    margin-top: 3rem; /*margen superior*/
-    color: azure; /*color de la fuente*/
 
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
 }
-.container-experiencias, .container-estudios{
-    width: 100%; /*ancho del contenedor*/
-    padding: 1rem; /*espacio interno*/
-    margin-top: 2rem; /*margen superior*/
-    line-height: 2rem; /*espacio entre los parrafos*/
-    font-size: large; /*tamaño de la fuente*/
-    margin: 2rem; /*margen superior e inferior*/
+
+.project-card h3 {
+    color: rgb(9, 0, 59);
+    margin-top: 10px;
+}
+/* Contenedor de tema */
+.theme-container {
+    position: relative;
+    width: 100%;
 }
 
 
-
-/*Responsive design*/
-/* Media agrupada */
-/* Media Queries agrupadas */
-
-/* Estilos para pantallas pequeñas, celular de 768px o menos */
-@media (max-width: 768px) {
-    .titulo {
-        justify-content: center; /*centra el contenido*/
-    }
-    .navigation{
-        flex-direction: column; /*cambia la direccion de los elementos*/
-        gap: 1rem; /*espacio entre los elementos*/
-        align-items: center;
-    }
-    .container-sobremi {
-        width: 100%; /*ancho del contenedor*/
-        padding: 1rem; /*espacio interno*/
-        margin-top: 1rem; /*margen superior*/   
-        line-height: 2.5rem; /*espacio entre los parrafos*/
-        font-size: small; /*tamaño de la fuente*/
-        flex-direction: column; /*cambia la direccion de los elementos*/
-    }
-
-    /*Agregamos el responsive design para la seccion de experiencia y estudios*/
-    .experiencias, .estudios{
-        width: 100%; /*ancho del contenedor*/
-        padding: 1rem; /*espacio interno*/
-        margin-top: 1rem; /*margen superior*/
-        font-size: small; /*tamaño de la fuente*/
-    }
-    .container-experiencias, .container-estudios{
-        width: 100%; /*ancho del contenedor*/
-        margin-top: 0rem; /*margen superior*/           
-    }
-}
-
-/* Estilos para pantallas medianas, tablet de 768px a 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .titulo {
-        justify-content: center; /*centra el contenido*/
-    }
-    .navigation{
-        gap: 2rem; /*espacio entre los elementos*/
-        justify-items: center;
-    }
-
-    /*Agregamos el responsive design para la seccion de experiencia y estudios*/
-    .experiencias, .estudios{
-        width: 75%; /*ancho del contenedor*/
-    }
-}
-
-
-
-/* Estilos para pantallas grandes, desktop de 1024px o más */
-@media (min-width: 1024px) {
-    .titulo {
-        justify-content: flex-start; /*justifica el contenido a la izquierda*/
-    }
-    .navigation{
-        gap: 3rem; /*espacio entre los elementos*/
-        justify-items: flex-end; /*justifica los elementos a la derecha*/
-        margin: 0  3rem; /*margen superior e inferior*/
-    }
-     /*Agregamos el responsive design para la seccion de experiencia y estudios*/
-     .experiencias, .estudios{
-        width: 75%; /*ancho del contenedor*/
-    }
-}
