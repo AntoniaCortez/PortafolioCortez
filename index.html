@@ -11,29 +11,24 @@
     
     <!-- Header -->
     <header>
-        
         <div class="container">
             <h1>Antonia Cortez</h1>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#sobremi">Sobre Mí</a></li>
-                    <li><a href="#estudios">Estudios</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    
-                </ul>
-            </nav>
-
-          
-       
-            
+            <div class="menu-container">
+                <button class="menu-button" onclick="toggleMenu()">Categorías</button>
+                <div class="menu-list" id="menu-list">
+                    <a href="#sobremi">Sobre Mí</a>
+                    <a href="#estudios">Estudios</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
         </div>
     </header>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Oscuro</button>
 
 
     <!-- Sección Sobre Mí -->
-    <section id="sobremi" class="sobremi">
+    <section id="sobremi" class="sobremi bubble">
         <div class="content">
             <img class="img-perfil" src="88484F24-70D1-4A09-AF66-6CA2A898DB53.jpeg" alt="Antonia" style="width: 200px; height: 200px;">
             <div class="text">
@@ -44,13 +39,13 @@
     </section>
 
     <!-- Sección Estudios -->
-    <section id="estudios" class="estudios">
+    <section id="estudios" class="estudios bubble">
         <h2>Mis Estudios</h2>
         <p>Actualmente estoy cursando 7mo año de la especialidad Informática en el Instituto El Obraje.</p>
     </section>
 
     <!-- Sección Proyectos -->
-    <section id="proyectos" class="proyectos">
+    <section id="proyectos" class="proyectos bubble">
         <h2>Proyectos</h2>
         <div class="proyectos-container">
             <div class="project-card">
@@ -72,7 +67,7 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto bubble">
         <h2>Contacto</h2>
         <b>Instagram:</b> <a href="https://instagram.com/antoo.cortezz" target="_blank">@antoo.cortezz</a>
         <center><b>Email:</b> <a href="mailto:antocortez18d@gmail.com">antocortez18d@gmail.com</a></br></center>
@@ -80,8 +75,8 @@
     </section>
     
 
-    <footer>
-        <center><p>© 2025 Antonia Cortez | Todos los derechos reservados</p></center>
+    <footer class="bubble">
+        <center><p>2025 Antonia Cortez </p></center>
     </footer>
     <script>
         function toggleDarkMode() {
@@ -95,6 +90,21 @@
             } else {
                 button.textContent = 'Modo Oscuro';
                 button.style.backgroundColor = '#195372';
+            }
+        }
+        function toggleMenu() {
+            document.getElementById("menu-list").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-button')) {
+                var dropdowns = document.getElementsByClassName("menu-list");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>
